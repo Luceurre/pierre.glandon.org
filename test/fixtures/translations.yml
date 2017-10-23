@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  word_1_id: 1
+  word_2_id: 1
+  progression: 1
+
+two:
+  user: two
+  word_1_id: 1
+  word_2_id: 1
+  progression: 1

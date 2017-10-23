@@ -1,0 +1,37 @@
+<%= form_with(model: translation, local: true) do |form| %>
+  <% if translation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(translation.errors.count, "error") %> prohibited this translation from being saved:</h2>
+
+      <ul>
+      <% translation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :translation_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :word_1_id %>
+    <%= form.number_field :word_1_id, id: :translation_word_1_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :word_2_id %>
+    <%= form.number_field :word_2_id, id: :translation_word_2_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :progression %>
+    <%= form.number_field :progression, id: :translation_progression %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
